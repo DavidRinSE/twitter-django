@@ -19,9 +19,9 @@ from django.urls import path
 from authentication.urls import urlpatterns as auth_urls
 from notification.urls import urlpatterns as notification_urls
 from tweet.urls import urlpatterns as tweet_urls
-from twitteruser.urls import urlpatterns as user_urls
+from twitteruser.urls import urlpatterns as user_urls # MUST be last because poor url structure yee
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
-urlpatterns += auth_urls + notification_urls + tweet_urls + user_urls
+urlpatterns += auth_urls + notification_urls + tweet_urls + user_urls # <- Look it's last

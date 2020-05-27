@@ -1,0 +1,21 @@
+{% include "navbar.html" %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            {% include "usercard.html" %}
+        </div>
+        <div class="col">
+            <!-- Tweet Feed
+            {% for tweet in tweets %}
+                <ul>
+                    <li><a href="/{{tweet.postedBy.username}}">{{tweet.postedBy.username}}</a> - <a href="/tweet/{{tweet.id}}">{{tweet.dateFiled}}</a></li>
+                    <ul>
+                        <li>{{tweet.text}}</li>
+                    </ul>
+                </ul>
+            {% endfor %} -->
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>

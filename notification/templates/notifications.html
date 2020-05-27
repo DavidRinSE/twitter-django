@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    Notifications
+    {% for notification in notifications %}
+        <ul>
+            <li><a href="/{{notification.user.username}}">{{notification.user.username}}</a> - <a href="/tweet/{{notification.tweet.id}}">{{notification.tweet.dateFiled}}</a></li>
+            <ul>
+                <li>{{notification.tweet.text}}</li>
+            </ul>
+        </ul>
+    {% endfor %}
+{% endblock %}

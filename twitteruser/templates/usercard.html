@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{username}}</h5>
+        <a href="/{{ username }}" class="card-subtitle">@{{username}}</a>
+        <p class="card-text">Tweets: {{ tweetcount }}</p>
+        <p class="card-text">Following: {{ followingcount }}</p>
+        {% if action %}
+            <a href="{{toggle}}" class="btn btn-primary">{{action}}</a>
+        {% endif %}
+    </div>
+</div>

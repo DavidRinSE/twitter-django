@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    Tweet Feed
+    {% for tweet in tweets %}
+        <ul>
+            <li><a href="/{{tweet.postedBy.username}}">{{tweet.postedBy.username}}</a> - <a href="/tweet/{{tweet.id}}">{{tweet.dateFiled}}</a></li>
+            <ul>
+                <li>{{tweet.text}}</li>
+            </ul>
+        </ul>
+    {% endfor %}
+{% endblock %}

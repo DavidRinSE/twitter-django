@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row"><h3>{{tweet.postedBy.username}}</h3><p> - {{tweet.dateFiled}}</p></div>
+    <p>{{tweet.text}}</p>
+{% endblock %}
